@@ -48,6 +48,12 @@ $(".saveBtn").on("click",function(){
     });
   }
 
+  addTense();
+  
+  setInterval(addTense,15000);
+
+  for(var i=9;i > 16;i++){$('#hour-" +i " .description').val(localStorage.getItem('hour-'  + i));}
+
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
